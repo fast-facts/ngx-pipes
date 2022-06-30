@@ -17,7 +17,7 @@
             "index": "src/index.html",
             "main": "src/ng-pipes/ng-pipes.module.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.json",
+            "tsConfig": "src/tsconfig.app.json",
             "aot": true,
             "assets": [],
             "styles": [],
@@ -34,7 +34,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -76,38 +75,20 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-            ],
-            "styles": [
-            ],
+            "assets": [],
+            "styles": [],
             "scripts": []
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-test:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-test:serve:production"
-            }
           }
         }
       }

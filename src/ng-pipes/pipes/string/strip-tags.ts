@@ -4,6 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class StripTagsPipe implements PipeTransform {
   transform(text: string, ...allowedTags: any[]): string {
     return allowedTags.length > 0
+      // eslint-disable-next-line no-useless-escape
       ? text.replace(new RegExp(`<(?!\/?(${allowedTags.join('|')})\s*\/?)[^>]+>`, 'g'), '')
       : text.replace(/<(?:.|\s)*?>/g, '');
   }

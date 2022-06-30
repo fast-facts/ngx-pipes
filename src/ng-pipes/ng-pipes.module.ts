@@ -16,7 +16,7 @@ import { NgDatePipesModule } from './pipes/date/index';
     NgDatePipesModule,
   ],
 })
-export class NgPipesModule {}
+export class NgPipesModule { }
 
 export * from './pipes/array/index';
 export * from './pipes/object/index';

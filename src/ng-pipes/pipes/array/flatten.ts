@@ -5,11 +5,12 @@ export class FlattenPipe implements PipeTransform {
   transform<T>(input: T, shallow?: boolean): T;
   transform(input: any[], shallow?: boolean): any[];
 
-  transform(input: any, shallow: boolean = false): any {
+  transform(input: any, shallow = false): any {
     if (!Array.isArray(input)) {
       return input;
     }
 
+    // eslint-disable-next-line prefer-spread
     return shallow ? [].concat.apply([], input) : this.flatten(input);
   }
 

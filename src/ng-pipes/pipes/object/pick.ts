@@ -3,7 +3,7 @@ import { isObject } from '../helpers/helpers';
 
 @Pipe({ name: 'pick' })
 export class PickPipe implements PipeTransform {
-  transform(obj: any, ...args: Array<string>): Object {
+  transform(obj: any, ...args: Array<string>): any {
     if (Array.isArray(obj) || !isObject(obj)) {
       return obj;
     }

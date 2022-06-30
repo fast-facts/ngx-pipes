@@ -3,7 +3,7 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'rtrim' })
 export class RightTrimPipe implements PipeTransform {
-  transform(text: string, chars: string = '\\s'): string {
+  transform(text: string, chars = '\\s'): string {
     return isString(text) ? text.replace(new RegExp(`[${chars}]+$`), '') : text;
   }
 }

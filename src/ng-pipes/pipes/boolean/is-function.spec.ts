@@ -12,7 +12,7 @@ describe('IsFunctionPipe', () => {
     expect(pipe.transform(undefined)).toBeFalsy();
     expect(pipe.transform(1)).toBeFalsy();
     expect(pipe.transform('')).toBeFalsy();
-    expect(pipe.transform(() => {})).toBeTruthy();
-    expect(pipe.transform(function() {})).toBeTruthy();
+    expect(pipe.transform(() => { })).toBeTruthy();
+    expect(pipe.transform(() => { })).toBeTruthy();
   });
 });

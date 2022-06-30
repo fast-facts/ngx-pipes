@@ -32,7 +32,7 @@ export const MATH_PIPES = [
   imports: [],
   exports: MATH_PIPES,
 })
-export class NgMathPipesModule {}
+export class NgMathPipesModule { }
 
 export { MaxPipe } from './max';
 export { MinPipe } from './min';

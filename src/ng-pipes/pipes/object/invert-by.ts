@@ -3,7 +3,7 @@ import { isObject } from '../helpers/helpers';
 
 @Pipe({ name: 'invertBy' })
 export class InvertByPipe implements PipeTransform {
-  transform(obj: any, cb?: Function): Object {
+  transform(obj: any, cb?: (val: any) => void): any {
     if (Array.isArray(obj) || !isObject(obj)) {
       return obj;
     }

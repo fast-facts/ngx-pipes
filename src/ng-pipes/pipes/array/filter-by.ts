@@ -8,12 +8,11 @@ import {
   isUndefined,
 } from '../helpers/helpers';
 
-// tslint:disable no-bitwise
 @Pipe({ name: 'filterBy' })
 export class FilterByPipe implements PipeTransform {
   transform<T>(input: T, props: Array<string>, search?: any, strict?: boolean): T;
   transform(input: any[], props: Array<string>, search?: any, strict?: boolean): any[];
-  transform(input: any, props: Array<string>, search: any = '', strict: boolean = false): any {
+  transform(input: any, props: Array<string>, search: any = '', strict = false): any {
     if (
       !Array.isArray(input) ||
       (!Array.isArray(search) && !isString(search) && !isNumberFinite(search) && !isBoolean(search))
@@ -29,7 +28,6 @@ export class FilterByPipe implements PipeTransform {
       return props.some(prop => {
         return terms.some(term => {
           const value = extractDeepPropertyByMapKey(obj, prop);
-          /* tslint:disable */
           const { props, tail } = extractDeepPropertyByParentMapKey(obj, prop);
 
           if (isUndefined(value) && !isUndefined(props) && Array.isArray(props)) {

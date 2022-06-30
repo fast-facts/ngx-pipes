@@ -6,14 +6,14 @@ export class UnderscorePipe implements PipeTransform {
   transform(input: string, chars?: string): string;
   transform(input: any, chars?: string): any;
 
-  transform(text: any, chars: string = '\\s'): string {
+  transform(text: any, chars = '\\s'): string {
     return isString(text)
       ? text
-          .trim()
-          .replace(/\s+/g, '')
-          .replace(/[A-Z]/g, (c: string, k: any) => {
-            return k ? `_${c.toLowerCase()}` : c.toLowerCase();
-          })
+        .trim()
+        .replace(/\s+/g, '')
+        .replace(/[A-Z]/g, (c: string, k: any) => {
+          return k ? `_${c.toLowerCase()}` : c.toLowerCase();
+        })
       : text;
   }
 }

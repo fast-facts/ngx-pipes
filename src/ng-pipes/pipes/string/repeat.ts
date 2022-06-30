@@ -3,7 +3,7 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'repeat' })
 export class RepeatPipe implements PipeTransform {
-  transform(str: string, n: number = 1, separator: string = ''): string {
+  transform(str: string, n = 1, separator = ''): string {
     if (n <= 0) {
       throw new RangeError();
     }

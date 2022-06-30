@@ -1,44 +1,48 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+/dist
 /tmp
-coverage/
-#bundles/
-#esm/
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
 /node_modules
-/bower_components
 
-# output
-/dist
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # IDEs and editors
 /.idea
-/.vscode
 .project
-.angular
 .classpath
 .c9/
 *.launch
 .settings/
-ng-pipes.iml
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+# !.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
-yarn-error.log
+debug.log
 
-# e2e
-/e2e/*.js
-/e2e/*.map
-
-#System Files
+# System Files
 .DS_Store
 Thumbs.db
-ngx-pipes.iml

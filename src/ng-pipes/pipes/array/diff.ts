@@ -10,7 +10,6 @@ export class DiffPipe implements PipeTransform {
       return input;
     }
 
-    // tslint:disable-next-line no-bitwise
     return args.reduce((d, c) => d.filter((e: any) => !~c.indexOf(e)), input);
   }
 }

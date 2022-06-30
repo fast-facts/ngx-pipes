@@ -1,5 +1,15 @@
+This repo is solely meant for automated updates of dependencies found in danrevah's [ngx-pipes](https://github.com/danrevah/ngx-pipes) package.
+
+PRs will not be accepted for new features or bug fixes. Reach out to the original maintainer.
+
+```
+npm install ngx-pipes-updated
+```
+
+---
+
 <p align="center">
-<img 
+<img
     src="assets/ngx-logo.png" width="160" border="0" alt="NGX-PIPES">
 <br/><br/>
 <a href="https://www.npmjs.com/package/ngx-pipes"><img src="https://img.shields.io/npm/v/ngx-pipes.svg?style=flat-square" alt="npm"></a>
@@ -22,107 +32,105 @@
 
 ## Table of contents
 
- - [Installation](#installation)
- - [Contributing](#contributing)
- - [Changelog](CHANGELOG.md)
- - [Date](#date)   
-    - [timeAgo](#timeago)
- - [String](#string)
-    - [aOrAn](#aoran)
-    - [repeat](#repeat)
-    - [scan](#scan)
-    - [shorten](#shorten)
-    - [stripTags](#striptags)
-    - [ucfirst](#ucfirst)
-    - [ucwords](#ucwords)
-    - [trim](#trim)
-    - [ltrim](#ltrim)
-    - [rtrim](#rtrim)
-    - [reverse](#reverse)
-    - [slugify](#slugify)
-    - [camelize](#camelize)
-    - [latinise](#latinise)
-    - [lines](#lines)
-    - [underscore](#underscore)
-    - [test](#test)
-    - [match](#match)
-    - [lpad](#lpad)
-    - [rpad](#rpad)
-    - [makePluralString](#makepluralstring)
-    - [wrap](#wrap)
- - [Array](#Array)   
-    - [diff](#diff)
-    - [flatten](#flatten)
-    - [initial](#initial)
-    - [intersection](#intersection)
-    - [range](#range)
-    - [reverse](#reverse)
-    - [tail](#tail)
-    - [truthify](#truthify)
-    - [union](#union)
-    - [unique](#unique)
-    - [without](#without)
-    - [pluck](#pluck)
-    - [shuffle](#shuffle)
-    - [every](#every)
-    - [some](#some)
-    - [sample](#sample)
-    - [groupBy](#groupby)
-    - [groupByImpure](#groupbyimpure)
-    - [filterBy](#filterby)
-    - [filterByImpure](#filterbyimpure)
-    - [orderBy](#orderby)
-    - [orderByImpure](#orderbyimpure)
-    - [chunk](#chunk)
-    - [fromPairs](#fromPairs)
- - [Object](#object)
-    - [keys](#keys)
-    - [values](#values)
-    - [pairs](#pairs)
-    - [pick](#pick)
-    - [omit](#omit)
-    - [invert](#invert)
-    - [invertBy](#invertby)
-    - [diffObj](#diffobj)
- - [Math](#math)   
-    - [min](#min)
-    - [max](#max)
-    - [sum](#sum)
-    - [average](#average)
-    - [percentage](#percentage)
-    - [ceil](#ceil)
-    - [floor](#floor)
-    - [round](#round)
-    - [sqrt](#sqrt)
-    - [pow](#pow)
-    - [degrees](#degrees)
-    - [radians](#radians)
-    - [bytes](#bytes)
- - [Boolean](#boolean)   
-    - [isNull](#isnull)
-    - [isDefined](#isdefined)
-    - [isUndefined](#isundefined)
-    - [isString](#isstring)
-    - [isFunction](#isfunction)
-    - [isNumber](#isnumber)
-    - [isArray](#isarray)
-    - [isObject](#isobject)
-    - [isGreaterThan](#isgreaterthan)
-    - [isGreaterEqualThan](#isgreaterequalthan)
-    - [isLessThan](#islessthan)
-    - [isLessEqualThan](#islessequalthan)
-    - [isEqualTo](#isequalto)
-    - [isNotEqualTo](#isnotequalto)
-    - [isIdenticalTo](#isidenticalto)
-    - [isNotIdenticalTo](#isnotidenticalto)
- 
+- [Table of contents](#table-of-contents)
+- [Installation](#installation)
+- [Date](#date)
+  - [timeAgo](#timeago)
+- [String](#string)
+  - [aOrAn](#aoran)
+  - [repeat](#repeat)
+  - [scan](#scan)
+  - [shorten](#shorten)
+  - [stripTags](#striptags)
+  - [ucfirst](#ucfirst)
+  - [ucwords](#ucwords)
+  - [trim](#trim)
+  - [ltrim](#ltrim)
+  - [rtrim](#rtrim)
+  - [reverse](#reverse)
+  - [slugify](#slugify)
+  - [camelize](#camelize)
+  - [latinise](#latinise)
+  - [lines](#lines)
+  - [underscore](#underscore)
+  - [test](#test)
+  - [match](#match)
+  - [lpad](#lpad)
+  - [rpad](#rpad)
+  - [makePluralString](#makepluralstring)
+  - [wrap](#wrap)
+- [Array](#array)
+  - [diff](#diff)
+  - [flatten](#flatten)
+  - [initial](#initial)
+  - [tail](#tail)
+  - [intersection](#intersection)
+  - [range](#range)
+  - [reverse](#reverse-1)
+  - [truthify](#truthify)
+  - [union](#union)
+  - [unique](#unique)
+  - [without](#without)
+  - [pluck](#pluck)
+  - [shuffle](#shuffle)
+  - [every](#every)
+  - [some](#some)
+  - [sample](#sample)
+  - [groupBy](#groupby)
+  - [groupByImpure](#groupbyimpure)
+  - [filterBy](#filterby)
+  - [filterByImpure](#filterbyimpure)
+  - [orderBy](#orderby)
+  - [orderByImpure](#orderbyimpure)
+  - [chunk](#chunk)
+  - [fromPairs](#frompairs)
+- [Object](#object)
+  - [keys](#keys)
+  - [values](#values)
+  - [pairs](#pairs)
+  - [pick](#pick)
+  - [omit](#omit)
+  - [invert](#invert)
+  - [invertBy](#invertby)
+  - [diffObj](#diffobj)
+- [Math](#math)
+  - [min](#min)
+  - [max](#max)
+  - [sum](#sum)
+  - [average](#average)
+  - [percentage](#percentage)
+  - [ceil](#ceil)
+  - [floor](#floor)
+  - [round](#round)
+  - [sqrt](#sqrt)
+  - [pow](#pow)
+  - [degrees](#degrees)
+  - [radians](#radians)
+  - [bytes](#bytes)
+- [Boolean](#boolean)
+  - [isNull](#isnull)
+  - [isDefined](#isdefined)
+  - [isUndefined](#isundefined)
+  - [isString](#isstring)
+  - [isNumber](#isnumber)
+  - [isArray](#isarray)
+  - [isObject](#isobject)
+  - [isGreaterThan](#isgreaterthan)
+  - [isGreaterEqualThan](#isgreaterequalthan)
+  - [isLessThan](#islessthan)
+  - [isLessEqualThan](#islessequalthan)
+  - [isEqualTo](#isequalto)
+  - [isNotEqualTo](#isnotequalto)
+  - [isIdenticalTo](#isidenticalto)
+  - [isNotIdenticalTo](#isnotidenticalto)
+- [Contributing](#contributing)
 
 ## Installation
 
 1. Use npm to install the package
 
   ```terminal
-  $ npm install ngx-pipes --save 
+  npm install ngx-pipes --save 
   ```
 
 2. You could either add into your module `imports` the `NgPipesModule` in order to add all of the pipes, Or add a specific module such as `NgArrayPipesModule`, `NgObjectPipesModule`, `NgStringPipesModule`, `NgMathPipesModule`, `NgDatePipesModule` or `NgBooleanPipesModule`.
@@ -156,7 +164,7 @@
   }
   ```
 
-4. You can also use pipes as part of your template for ex. 
+4. You can also use pipes as part of your template for ex.
 
 ```html
 <p>{{ 'foo' | reverse }}</p> <!-- Output: "oof" -->
@@ -168,7 +176,6 @@ and it's also possible to stack multiple pipes
 <p>{{ ' foo' | ltrim | reverse }}</p> <!-- Output: "oof" -->
 ```
 
-
 ## Date
 
 ### timeAgo
@@ -176,6 +183,7 @@ and it's also possible to stack multiple pipes
 Time ago pipe converts date to 'just now', 'X days ago', 'last week', 'X days ago', etc..
 
 **Usage:** `string | timeAgo`
+
 ```typescript
 import * as moment from 'moment';
 
@@ -386,7 +394,6 @@ Returns array of matched elements in string.
 
 Left pad a string to a given length using a given pad character (default is a space)
 
-
 **Usage:** `string | lpad: length: [padCharacter:string|optional]`
 
 ```html
@@ -398,7 +405,6 @@ Left pad a string to a given length using a given pad character (default is a sp
 ### rpad
 
 Right pad a string to a given length using a given pad character  (default is a space)
-
 
 **Usage:** `string | rpad: length: [padCharacter:string|optional]`
 
@@ -418,13 +424,11 @@ Make a singular string plural. Optional `quantity` argument specifies how many o
 <span>{{'One Painting' | makePluralString: 1}}</span> <!-- Output: "One Painting" -->
 <span>{{'Painting' | makePluralString: 4}}</span> <!-- Output: "Paintings" -->
 <span>{{'Four Painting' | makePluralString: 4}}</span> <!-- Output: "Four Paintings" -->
-``` 
-
+```
 
 ### wrap
 
 Wrap a string between a prefix and a suffix
-
 
 **Usage:** `string | wrap: prefix: suffix`
 
@@ -436,7 +440,7 @@ Wrap a string between a prefix and a suffix
 
 ### diff
 
-Returns array of diff between arrays 
+Returns array of diff between arrays
 
 **Usage:** `array | diff: [ARRAY]: [ARRAY]: ... : [ARRAY]`
 
@@ -730,7 +734,7 @@ this.arrayNestedObject = [
 
 Identical to groupBy pipe, the only difference is that it's an impure pipe.
 
-Impure pipes: https://angular.io/guide/pipes#impure-pipes
+Impure pipes: <https://angular.io/guide/pipes#impure-pipes>
 
 ### filterBy
 
@@ -773,11 +777,11 @@ this.users = [
 
 Identical to filterBy pipe, the only difference is that it's an impure pipe.
 
-Impure pipes: https://angular.io/guide/pipes#impure-pipes
+Impure pipes: <https://angular.io/guide/pipes#impure-pipes>
 
 ### orderBy
 
-Returns ordered array by configuration 
+Returns ordered array by configuration
 
 **Usage:** `array | orderBy: [prop, nested.prop, array of props, ...]`
 
@@ -825,7 +829,7 @@ const deepObj = [
 
 Identical to orderBy pipe, the only difference is that it's an impure pipe.
 
-Impure pipes: https://angular.io/guide/pipes#impure-pipes
+Impure pipes: <https://angular.io/guide/pipes#impure-pipes>
 
 ### chunk
 
@@ -840,7 +844,7 @@ Returns chunked array or string by size
 
 ### fromPairs
 
-Returns object of an array of key value pairs 
+Returns object of an array of key value pairs
 
 **Usage:** `array | fromPairs`
 
@@ -873,7 +877,7 @@ Returns array of object values
 
 ### pairs
 
-Returns array of an object key value pairs 
+Returns array of an object key value pairs
 
 **Usage:** `object | pairs`
 
@@ -990,7 +994,7 @@ Returns the average of a given array
 
 ### percentage
 
-Returns percentage between numbers 
+Returns percentage between numbers
 
 **Usage:** `number | percentage: [total | default = 100]: [floor | default = false]`
 
@@ -1002,7 +1006,7 @@ Returns percentage between numbers
 
 ### ceil
 
-Returns ceil of a number by precision 
+Returns ceil of a number by precision
 
 **Usage:** `number | ceil: [precision | default = 0]`
 
@@ -1013,7 +1017,7 @@ Returns ceil of a number by precision
 
 ### floor
 
-Returns floor of a number by precision 
+Returns floor of a number by precision
 
 **Usage:** `number | floor: [precision | default = 0]`
 
@@ -1024,7 +1028,7 @@ Returns floor of a number by precision
 
 ### round
 
-Returns round of a number by precision 
+Returns round of a number by precision
 
 **Usage:** `number | round: [precision | default = 0]`
 
@@ -1036,7 +1040,7 @@ Returns round of a number by precision
 
 ### sqrt
 
-Returns the square root of a number 
+Returns the square root of a number
 
 **Usage:** `number | sqrt`
 
@@ -1046,7 +1050,7 @@ Returns the square root of a number
 
 ### pow
 
-Returns the power of a number 
+Returns the power of a number
 
 **Usage:** `number | pow: [power | default = 2]`
 
@@ -1057,7 +1061,7 @@ Returns the power of a number
 
 ### degrees
 
-Returns the degrees of a number in radians 
+Returns the degrees of a number in radians
 
 **Usage:** `number | degrees`
 
@@ -1067,7 +1071,7 @@ Returns the degrees of a number in radians
 
 ### radians
 
-Returns the radians of a number in degrees 
+Returns the radians of a number in degrees
 
 **Usage:** `number | radians`
 
@@ -1116,7 +1120,6 @@ Returns bytes with a unit symbol
 <p>{{ 1 | isUndefined }}</p> <!-- Output: "false" -->
 <p>{{ undefined | isUndefined }}</p> <!-- Output: "true" -->
 ```
-
 
 ### isString
 
@@ -1255,30 +1258,31 @@ this.num = 1;
 
 ## Contributing
 
-* Before adding any new feature or a fix make sure to open an issue first!
+- Before adding any new feature or a fix make sure to open an issue first!
 
 Make sure you have `angular-cli` & `karma` installed globally.
 
 ```bash
-$ npm install -g angular-cli karma
+npm install -g angular-cli karma
 ```
 
 Clone the project, and install dependencies.
 
 ```bash
-$ git clone https://github.com/danrevah/ngx-pipes.git
-$ npm install
+git clone https://github.com/danrevah/ngx-pipes.git
+npm install
 ```
 
 Create a new branch
 
 ```bash
-$ git checkout -b feat/someFeature
+git checkout -b feat/someFeature
 ```
 
 Add tests & make sure everything is running properly
+
 ```bash
-$ npm test
+npm test
 ```
 
 Commit & push, and make a pull request!

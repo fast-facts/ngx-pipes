@@ -34,7 +34,6 @@ export class OrderByPipe implements PipeTransform {
       const [prop, asc, sign] = OrderByPipe.extractFromConfig(config);
 
       if (config.length === 1) {
-        // tslint:disable-next-line:switch-default
         switch (sign) {
           case '+':
             return out.sort(OrderByPipe.simpleSort.bind(this));

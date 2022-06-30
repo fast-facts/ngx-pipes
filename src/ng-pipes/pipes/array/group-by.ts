@@ -3,7 +3,7 @@ import { extractDeepPropertyByMapKey, isFunction } from '../helpers/helpers';
 
 @Pipe({ name: 'groupBy' })
 export class GroupByPipe implements PipeTransform {
-  transform(input: any, discriminator: any = [], delimiter: string = '|'): any {
+  transform(input: any, discriminator: any = [], delimiter = '|'): any {
     if (!Array.isArray(input)) {
       return input;
     }
@@ -23,7 +23,7 @@ export class GroupByPipe implements PipeTransform {
 
   private extractKeyByDiscriminator(discriminator: any, payload: string, delimiter: string) {
     if (isFunction(discriminator)) {
-      return (<Function>discriminator)(payload);
+      return discriminator(payload);
     }
 
     if (Array.isArray(discriminator)) {

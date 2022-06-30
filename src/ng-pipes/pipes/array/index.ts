@@ -56,7 +56,7 @@ const ARRAY_PIPES = [
   imports: [],
   exports: ARRAY_PIPES,
 })
-export class NgArrayPipesModule {}
+export class NgArrayPipesModule { }
 
 export { DiffPipe } from './diff';
 export { InitialPipe } from './initial';

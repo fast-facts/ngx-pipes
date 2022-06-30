@@ -10,7 +10,6 @@ export class IntersectionPipe implements PipeTransform {
       return input;
     }
 
-    // tslint:disable-next-line no-bitwise
     return args.reduce((n, c) => n.filter((e: any) => !!~c.indexOf(e)), input);
   }
 }

@@ -15,7 +15,7 @@ const OBJECT_PIPES = [KeysPipe, ValuesPipe, PairsPipe, PickPipe, InvertPipe, Inv
   imports: [],
   exports: OBJECT_PIPES,
 })
-export class NgObjectPipesModule {}
+export class NgObjectPipesModule { }
 
 export { KeysPipe } from './keys';
 export { ValuesPipe } from './values';

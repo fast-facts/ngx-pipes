@@ -3,7 +3,7 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'wrap' })
 export class WrapPipe implements PipeTransform {
-  transform(str: string, prefix: string = '', suffix: string = ''): string {
+  transform(str: string, prefix = '', suffix = ''): string {
     if (!isString(str)) {
       return str;
     }

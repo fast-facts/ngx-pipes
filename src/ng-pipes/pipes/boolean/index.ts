@@ -41,7 +41,7 @@ export const BOOLEAN_PIPES = [
   imports: [],
   exports: BOOLEAN_PIPES,
 })
-export class NgBooleanPipesModule {}
+export class NgBooleanPipesModule { }
 
 export { IsDefinedPipe } from './is-defined';
 export { IsNullPipe } from './is-null';

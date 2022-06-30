@@ -50,7 +50,7 @@ export const STRING_PIPES = [
   imports: [],
   exports: STRING_PIPES,
 })
-export class NgStringPipesModule {}
+export class NgStringPipesModule { }
 
 export { AorAnPipe } from './a-or-an';
 export { UcWordsPipe } from './ucwords';

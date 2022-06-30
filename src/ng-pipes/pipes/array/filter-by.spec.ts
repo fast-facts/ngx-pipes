@@ -4,7 +4,6 @@ describe('FilterByPipe', () => {
   let pipe: FilterByPipe;
 
   const users = [
-    // tslint:disable:max-line-length
     {
       id: 1,
       first_name: 'John',
@@ -62,7 +61,6 @@ describe('FilterByPipe', () => {
       arr: [{ name: 'for' }],
       current_employed: false,
     },
-    // tslint:enable:max-line-length
   ];
 
   beforeEach(() => {
