@@ -40,7 +40,6 @@
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
     "@angular/compiler-cli": "^14.0.0",
-    "@angular/core": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@types/jasmine": "^4.0.3",

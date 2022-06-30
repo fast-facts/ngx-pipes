@@ -19,6 +19,6 @@ describe('MatchPipe Tests', () => {
     expect(pipe.transform('42 foo', '[\\d]+$', 'g')).toEqual(null);
     expect(pipe.transform('foo', '[\\d]+$', 'g')).toEqual(null);
     expect(pipe.transform('FOO', '^foo')).toEqual(null);
-    expect(pipe.transform('FOO', '^foo', 'i')).toBeTruthy(['FOO']);
+    expect(pipe.transform('FOO', '^foo', 'i')).toBeTruthy();
   });
 });
