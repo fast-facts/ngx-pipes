@@ -44,9 +44,9 @@ export function ucFirst(text: string) {
     .split(/(?=['|-])/g)
     .map(
       (word: any) =>
-      word.indexOf('-') + word.indexOf("'") > -2
-        ? word.slice(0, 2).toUpperCase() + word.slice(2)
-        : word.slice(0, 1).toUpperCase() + word.slice(1)
+        word.indexOf('-') + word.indexOf("'") > -2
+          ? word.slice(0, 2).toUpperCase() + word.slice(2)
+          : word.slice(0, 1).toUpperCase() + word.slice(1)
     )
     .join('');
 
@@ -63,7 +63,7 @@ export function applyPrecision(num: number, precision: number) {
   return Math.round(num * tho) / tho;
 }
 
-export function extractDeepPropertyByMapKey(obj: any, map: string): any {
+export function extractDeepPropertyByMapKey(obj: any, map: string) {
   const keys = map.split('.');
   const head = keys.shift();
 
@@ -72,7 +72,7 @@ export function extractDeepPropertyByMapKey(obj: any, map: string): any {
   }, obj[head || '']);
 }
 
-export function extractDeepPropertyByParentMapKey(obj: any, map: string): any {
+export function extractDeepPropertyByParentMapKey(obj: any, map: string) {
   const keys = map.split('.');
   const tail = keys.pop();
   const props = extractDeepPropertyByMapKey(obj, keys.join('.'));
@@ -80,11 +80,11 @@ export function extractDeepPropertyByParentMapKey(obj: any, map: string): any {
   return { props, tail };
 }
 
-export function getKeysTwoObjects(obj: any, other: any): any {
+export function getKeysTwoObjects(obj: any, other: any) {
   return [...Object.keys(obj), ...Object.keys(other)].filter((key, index, array) => array.indexOf(key) === index);
 }
 
-export function isDeepEqual(obj: any, other: any): any {
+export function isDeepEqual(obj: any, other: any) {
   if (!isObject(obj) || !isObject(other)) {
     return obj === other;
   }
@@ -102,3 +102,5 @@ export function isDeepEqual(obj: any, other: any): any {
     }
   );
 }
+
+export type GenericRecord<T> = Record<string | number | symbol, T>;

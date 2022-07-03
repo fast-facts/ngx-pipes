@@ -4,9 +4,9 @@ import { isString } from '../helpers/helpers';
 @Pipe({ name: 'camelize' })
 export class CamelizePipe implements PipeTransform {
   transform(input: string, chars?: string): string;
-  transform(input: any, chars?: string): any;
+  transform<T>(input: T, chars?: string): T;
 
-  transform(text: any, chars = '\\s'): string {
+  transform(text: string, chars = '\\s') {
     if (!isString(text)) {
       return text;
     }

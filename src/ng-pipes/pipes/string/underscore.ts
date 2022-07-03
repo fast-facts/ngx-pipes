@@ -3,10 +3,10 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'underscore' })
 export class UnderscorePipe implements PipeTransform {
-  transform(input: string, chars?: string): string;
-  transform(input: any, chars?: string): any;
+  transform(text: string, chars?: string): string;
+  transform<T>(text: T, chars?: string): T;
 
-  transform(text: any, chars = '\\s'): string {
+  transform(text: any, chars = '\\s') {
     return isString(text)
       ? text
         .trim()

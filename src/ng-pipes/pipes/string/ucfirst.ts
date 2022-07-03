@@ -3,10 +3,10 @@ import { isString, ucFirst } from '../helpers/helpers';
 
 @Pipe({ name: 'ucfirst' })
 export class UcFirstPipe implements PipeTransform {
-  transform(input: string): string;
-  transform(input: any): any;
+  transform(text: string): string;
+  transform<T>(text: T): T;
 
-  transform(text: any): string {
+  transform(text: any) {
     return isString(text) ? ucFirst(text) : text;
   }
 }

@@ -5,7 +5,7 @@ export class SqrtPipe implements PipeTransform {
   transform(num: number): number;
   transform<T>(num: T): T;
 
-  transform(num: any): any {
+  transform(num: any) {
     return !isNaN(num) ? Math.sqrt(num) : num;
   }
 }

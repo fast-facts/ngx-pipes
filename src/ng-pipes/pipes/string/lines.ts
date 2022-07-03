@@ -3,7 +3,10 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'lines' })
 export class LinesPipe implements PipeTransform {
-  transform(text: any, chars = '\\s'): Array<string> | any {
+  transform(text: string, chars?: string): string[];
+  transform<T>(text: T, chars?: string): T;
+
+  transform(text: any, chars = '\\s') {
     return isString(text) ? text.replace(/\r\n/g, '\n').split('\n') : text;
   }
 }

@@ -2,10 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'flatten' })
 export class FlattenPipe implements PipeTransform {
+  transform<T extends Array<any>>(input: T, shallow?: boolean): any[];
   transform<T>(input: T, shallow?: boolean): T;
-  transform(input: any[], shallow?: boolean): any[];
 
-  transform(input: any, shallow = false): any {
+  transform(input: any, shallow = false) {
     if (!Array.isArray(input)) {
       return input;
     }

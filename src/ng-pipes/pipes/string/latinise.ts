@@ -834,9 +834,9 @@ export class LatinisePipe implements PipeTransform {
   };
 
   transform(input: string, chars?: string): string;
-  transform(input: any, chars?: string): any;
+  transform<T>(input: T, chars?: string): T;
 
-  transform(text: any, chars = '\\s'): string {
+  transform(text: string, chars = '\\s') {
     return isString(text)
       ? text.replace(/[^A-Za-z0-9]/g, (key: string) => {
         return this.latinMap[key] || key;

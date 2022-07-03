@@ -10,9 +10,10 @@ import {
 
 @Pipe({ name: 'filterBy' })
 export class FilterByPipe implements PipeTransform {
-  transform<T>(input: T, props: Array<string>, search?: any, strict?: boolean): T;
-  transform(input: any[], props: Array<string>, search?: any, strict?: boolean): any[];
-  transform(input: any, props: Array<string>, search: any = '', strict = false): any {
+  transform<K, T extends Array<K>>(input: T, props: string[], search?: any, strict?: boolean): T;
+  transform<T>(input: T, props?: string[], search?: any, strict?: boolean): T;
+
+  transform(input: any, props: string[], search: any = '', strict = false) {
     if (
       !Array.isArray(input) ||
       (!Array.isArray(search) && !isString(search) && !isNumberFinite(search) && !isBoolean(search))

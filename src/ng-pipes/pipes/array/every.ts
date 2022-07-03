@@ -2,7 +2,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'every' })
 export class EveryPipe implements PipeTransform {
-  transform(input: any, predicate: (value: any, index: number, array: any[]) => boolean): boolean | any[] {
+  transform<T extends Array<any>>(input: T, predicate?: Predicate): boolean;
+  transform<T>(input: T, predicate?: Predicate): false;
+
+  transform(input: any[], predicate?: Predicate) {
     return Array.isArray(input) ? input.every(predicate) : false;
   }
 }
+
+type Predicate = (value: any, index: number, array: any[]) => boolean;

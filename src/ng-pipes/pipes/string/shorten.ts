@@ -3,10 +3,10 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'shorten' })
 export class ShortenPipe implements PipeTransform {
-  transform(input: string, length?: number, suffix?: string, wordBreak?: boolean): string;
-  transform(input: any, length?: number, suffix?: string, wordBreak?: boolean): any;
+  transform(text: string, length?: number, suffix?: string, wordBreak?: boolean): string;
+  transform<T>(text: T, length?: number, suffix?: string, wordBreak?: boolean): T;
 
-  transform(text: any, length = 0, suffix = '', wordBreak = true): string {
+  transform(text: any, length = 0, suffix = '', wordBreak = true) {
     if (!isString(text)) {
       return text;
     }

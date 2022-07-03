@@ -3,10 +3,10 @@ import { extractDeepPropertyByMapKey, isObject, isUndefined } from '../helpers/h
 
 @Pipe({ name: 'unique' })
 export class UniquePipe implements PipeTransform {
-  transform(input: any[], args?: string | undefined): any[];
-  transform<T>(input: T, args?: string | undefined): T;
+  transform<T extends Array<any>>(input: T, propertyName: string): T;
+  transform<T>(input: T, propertyName?: string): T;
 
-  transform(input: any, propertyName?: string | undefined): any {
+  transform(input: any, propertyName?: string) {
     const uniques: boolean[] = [];
 
     return Array.isArray(input)

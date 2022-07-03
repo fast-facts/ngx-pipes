@@ -4,9 +4,9 @@ import { isString } from '../helpers/helpers';
 @Pipe({ name: 'test' })
 export class TestPipe implements PipeTransform {
   transform(text: string, pattern: string, flags?: string): boolean;
-  transform<T>(text: T, pattern: string, flags?: string): T;
+  transform<T>(text: T, pattern?: string, flags?: string): T;
 
-  transform(text: any, pattern: string, flags?: string): any {
+  transform(text: any, pattern: string, flags?: string) {
     if (!isString(text)) {
       return text;
     }

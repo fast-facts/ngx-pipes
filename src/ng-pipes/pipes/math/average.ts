@@ -3,7 +3,7 @@ import { isNumberFinite } from '../helpers/helpers';
 
 @Pipe({ name: 'average' })
 export class AveragePipe implements PipeTransform {
-  transform(arr: number[]): string | number {
+  transform(arr: number[]): number {
     const isValid = arr.every(value => isNumberFinite(value));
 
     if (!isValid) {

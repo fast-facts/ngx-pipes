@@ -3,7 +3,11 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'chunk' })
 export class ChunkPipe implements PipeTransform {
-  transform(input: any, size = 1): any {
+  transform<T extends Array<any>>(input: T, size?: number): T[];
+  transform<T extends string>(input: T, size?: number): string[][];
+  transform<T>(input: T, size?: number): T;
+
+  transform(input: any, size = 1) {
     if (isString(input)) {
       return this.chunk(input
         .split(''), size);

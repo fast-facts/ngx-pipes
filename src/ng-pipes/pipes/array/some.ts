@@ -2,10 +2,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'some' })
 export class SomePipe implements PipeTransform {
-  transform(input: any[], predicate: (value: any, index: number, array: any[]) => boolean): boolean;
-  transform<T>(input: T, predicate: (value: any, index: number, array: any[]) => boolean): T;
+  transform<T extends Array<any>>(input: T, predicate?: Predicate): boolean;
+  transform<T>(input: T, predicate?: Predicate): T;
 
-  transform(input: any, predicate: (value: any, index: number, array: any[]) => boolean): any {
+  transform(input: any, predicate: Predicate) {
     return Array.isArray(input) ? input.some(predicate) : input;
   }
 }
+
+type Predicate = (value: any, index: number, array: any[]) => boolean;
