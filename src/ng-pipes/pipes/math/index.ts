@@ -3,6 +3,7 @@ import { MaxPipe } from './max';
 import { MinPipe } from './min';
 import { PercentagePipe } from './percentage';
 import { SumPipe } from './sum';
+import { AveragePipe } from './average';
 import { FloorPipe } from './floor';
 import { RoundPipe } from './round';
 import { SqrtPipe } from './sqrt';
@@ -17,6 +18,7 @@ export const MATH_PIPES = [
   MinPipe,
   PercentagePipe,
   SumPipe,
+  AveragePipe,
   FloorPipe,
   RoundPipe,
   SqrtPipe,
@@ -38,6 +40,7 @@ export { MaxPipe } from './max';
 export { MinPipe } from './min';
 export { PercentagePipe } from './percentage';
 export { SumPipe } from './sum';
+export { AveragePipe } from './average';
 export { FloorPipe } from './floor';
 export { RoundPipe } from './round';
 export { SqrtPipe } from './sqrt';
