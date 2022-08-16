@@ -44,7 +44,7 @@
     "@angular/platform-browser-dynamic": "^14.1.2",
     "@types/jasmine": "^4.0.3",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "^18.7.3",
+    "@types/node": "^18.7.5",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.0",
     "core-js": "^3.24.1",
