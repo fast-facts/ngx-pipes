@@ -1,5 +1,6 @@
 import { DiffPipe } from './diff';
 import { InitialPipe } from './initial';
+import { SlicePipe } from './slice';
 import { FlattenPipe } from './flatten';
 import { IntersectionPipe } from './intersection';
 import { ReversePipe } from './reverse';
@@ -28,6 +29,7 @@ const ARRAY_PIPES = [
   DiffPipe,
   FlattenPipe,
   InitialPipe,
+  SlicePipe,
   IntersectionPipe,
   ReversePipe,
   TailPipe,
@@ -60,6 +62,7 @@ export class NgArrayPipesModule { }
 
 export { DiffPipe } from './diff';
 export { InitialPipe } from './initial';
+export { SlicePipe } from './slice';
 export { FlattenPipe } from './flatten';
 export { IntersectionPipe } from './intersection';
 export { ReversePipe } from './reverse';

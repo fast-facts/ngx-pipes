@@ -62,6 +62,7 @@ npm install ngx-pipes-updated
 - [Array](#array)
   - [diff](#diff)
   - [flatten](#flatten)
+  - [Slice](#slice)
   - [initial](#initial)
   - [tail](#tail)
   - [intersection](#intersection)
@@ -465,6 +466,20 @@ this.items = [1,2,3,[4,5,6,[7,8,9],[10,11,12,13,[14],[15],[16, [17]]]]];
 ```html
 <li *ngFor="let item of items | flatten"> 
 <!-- Array: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17] -->
+```
+
+### Slice
+
+Slice an array of elements. This is the same as the build in slice pipe, but without the issues discussed [here](https://github.com/angular/vscode-ng-language-service/issues/345).
+
+**Usage:** `array | slice: start: end`
+
+```typescript
+this.items = [first, second, third];
+```
+
+```html
+<li *ngFor="let item of items | slice: 1, 2"> <!-- Array: [second] -->
 ```
 
 ### initial
