@@ -48,7 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "core-js": "^3.30.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "eslint-plugin-deprecation": "^1.4.1",
     "husky": "^8.0.3",
     "jasmine-core": "^4.6.0",
