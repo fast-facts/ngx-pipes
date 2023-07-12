@@ -3,7 +3,7 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'chunk' })
 export class ChunkPipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, size?: number): T[];
+  transform<T extends any[]>(input: T, size?: number): T[];
   transform<T extends string>(input: T, size?: number): string[][];
   transform<T>(input: T, size?: number): T;
 

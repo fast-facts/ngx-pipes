@@ -4,7 +4,7 @@ import type { GenericRecord } from '../helpers/helpers';
 
 @Pipe({ name: 'pluck', pure: false })
 export class PluckPipe implements PipeTransform {
-  transform<T extends Array<GenericRecord<any>>>(input: T, map: string): any[];
+  transform<T extends GenericRecord<any>[]>(input: T, map: string): any[];
   transform<T extends GenericRecord<any>>(input: T, map: string): any;
   transform<T>(input: T, map?: string): T;
 

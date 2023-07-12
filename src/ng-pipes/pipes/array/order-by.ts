@@ -3,7 +3,7 @@ import { extractDeepPropertyByMapKey, isString, isUndefined } from '../helpers/h
 
 @Pipe({ name: 'orderBy' })
 export class OrderByPipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, config: any): T;
+  transform<T extends any[]>(input: T, config: any): T;
   transform<T>(input: T, config?: any): T;
 
   transform(input: any, config?: any) {

@@ -3,7 +3,7 @@ import type { GenericRecord } from '../helpers/helpers';
 
 @Pipe({ name: 'fromPairs' })
 export class FromPairsPipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T): GenericRecord<any>;
+  transform<T extends any[]>(input: T): GenericRecord<any>;
   transform<T>(input: T): T;
 
   transform(input: any) {

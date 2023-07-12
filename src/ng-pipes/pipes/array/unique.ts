@@ -3,7 +3,7 @@ import { extractDeepPropertyByMapKey, isObject, isUndefined } from '../helpers/h
 
 @Pipe({ name: 'unique' })
 export class UniquePipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, propertyName: string): T;
+  transform<T extends any[]>(input: T, propertyName: string): T;
   transform<T>(input: T, propertyName?: string): T;
 
   transform(input: any, propertyName?: string) {

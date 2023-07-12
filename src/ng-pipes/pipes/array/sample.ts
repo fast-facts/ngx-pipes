@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'sample' })
 export class SamplePipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, len?: number): T;
+  transform<T extends any[]>(input: T, len?: number): T;
   transform<T>(input: T, len?: number): T;
 
   transform(input: any, len = 1) {
