@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'some' })
 export class SomePipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, predicate?: Predicate): boolean;
+  transform<T extends any[]>(input: T, predicate?: Predicate): boolean;
   transform<T>(input: T, predicate?: Predicate): T;
 
   transform(input: any, predicate: Predicate) {

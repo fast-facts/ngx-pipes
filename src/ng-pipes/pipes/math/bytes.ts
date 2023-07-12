@@ -3,7 +3,7 @@ import { applyPrecision, isNumberFinite, isUndefined } from '../helpers/helpers'
 
 @Pipe({ name: 'bytes' })
 export class BytesPipe implements PipeTransform {
-  private dictionary: Array<{ max: number; type: string }> = [
+  private dictionary: { max: number; type: string }[] = [
     { max: 1024, type: 'B' },
     { max: 1048576, type: 'KB' },
     { max: 1073741824, type: 'MB' },

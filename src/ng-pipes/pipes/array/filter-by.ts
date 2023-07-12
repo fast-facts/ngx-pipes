@@ -10,7 +10,7 @@ import {
 
 @Pipe({ name: 'filterBy' })
 export class FilterByPipe implements PipeTransform {
-  transform<K, T extends Array<K>>(input: T, props: string[], search?: any, strict?: boolean): T;
+  transform<K, T extends K[]>(input: T, props: string[], search?: any, strict?: boolean): T;
   transform<T>(input: T, props?: string[], search?: any, strict?: boolean): T;
 
   transform(input: any, props: string[], search: any = '', strict = false) {

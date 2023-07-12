@@ -3,7 +3,7 @@ import { isString } from '../helpers/helpers';
 
 @Pipe({ name: 'reverse' })
 export class ReversePipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T): T;
+  transform<T extends any[]>(input: T): T;
   transform<T>(input: T): T;
 
   transform(input: any) {

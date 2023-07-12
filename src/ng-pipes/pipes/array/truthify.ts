@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'truthify' })
 export class TrurthifyPipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T): T;
+  transform<T extends any[]>(input: T): T;
   transform<T>(input: T): T;
 
   transform(input: any) {

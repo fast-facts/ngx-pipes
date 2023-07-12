@@ -4,7 +4,7 @@ import type { GenericRecord } from '../helpers/helpers';
 
 @Pipe({ name: 'groupBy' })
 export class GroupByPipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T, discriminator?: any, delimiter?: string): GenericRecord<T>;
+  transform<T extends any[]>(input: T, discriminator?: any, delimiter?: string): GenericRecord<T>;
   transform<T>(input: T, discriminator?: any, delimiter?: string): T;
 
   transform(input: any, discriminator: any = [], delimiter = '|') {
@@ -34,6 +34,6 @@ export class GroupByPipe implements PipeTransform {
       return discriminator.map(k => extractDeepPropertyByMapKey(payload, k)).join(delimiter);
     }
 
-    return extractDeepPropertyByMapKey(payload, <string>discriminator);
+    return extractDeepPropertyByMapKey(payload, discriminator as string);
   }
 }

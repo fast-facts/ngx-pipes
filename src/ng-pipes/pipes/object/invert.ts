@@ -4,7 +4,7 @@ import type { GenericRecord } from '../helpers/helpers';
 
 @Pipe({ name: 'invert' })
 export class InvertPipe implements PipeTransform {
-  transform<T extends Array<any>>(obj: T): T;
+  transform<T extends any[]>(obj: T): T;
   transform<T>(obj: T): T extends GenericRecord<any> ? GenericRecord<any> : T;
 
   transform(obj: any) {

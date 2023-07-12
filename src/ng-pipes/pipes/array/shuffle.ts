@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'shuffle' })
 export class ShufflePipe implements PipeTransform {
-  transform<T extends Array<any>>(input: T): T;
+  transform<T extends any[]>(input: T): T;
   transform<T>(input: T): T;
 
   // Using a version of the Fisher-Yates shuffle algorithm

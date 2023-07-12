@@ -4,7 +4,7 @@ import type { GenericRecord } from '../helpers/helpers';
 
 @Pipe({ name: 'diffObj' })
 export class DiffObjPipe implements PipeTransform {
-  transform<T extends Array<any>>(obj: T, original: any): GenericRecord<never>;
+  transform<T extends any[]>(obj: T, original: any): GenericRecord<never>;
   transform<T>(obj: T, original: any): T extends GenericRecord<any> ? Partial<T> : GenericRecord<never>;
 
   transform(obj: any, original: any) {
