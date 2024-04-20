@@ -21,6 +21,7 @@ import { RightPadPipe } from './rpad';
 import { MakePluralStringPipe } from './pluralize';
 import { WrapPipe } from './wrap';
 import { ReplaceRegexPipe } from './replace-regex';
+import { SplitPipe } from './split';
 
 export const STRING_PIPES = [
   AorAnPipe,
@@ -45,6 +46,7 @@ export const STRING_PIPES = [
   MakePluralStringPipe,
   WrapPipe,
   ReplaceRegexPipe,
+  SplitPipe,
 ];
 
 @NgModule({
