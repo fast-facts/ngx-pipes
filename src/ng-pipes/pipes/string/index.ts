@@ -78,3 +78,4 @@ export { RightPadPipe } from './rpad';
 export { MakePluralStringPipe } from './pluralize';
 export { WrapPipe } from './wrap';
 export { ReplaceRegexPipe } from './replace-regex';
+export { SplitPipe } from './split';
