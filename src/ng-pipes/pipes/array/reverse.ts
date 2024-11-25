@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'reverse' })
+@Pipe({
+    name: 'reverse',
+    standalone: false
+})
 export class ReversePipe implements PipeTransform {
   transform<T extends any[]>(input: T): T;
   transform<T>(input: T): T;

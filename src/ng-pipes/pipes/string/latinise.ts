@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'latinise' })
+@Pipe({
+    name: 'latinise',
+    standalone: false
+})
 export class LatinisePipe implements PipeTransform {
   // Source: http://semplicewebsites.com/removing-accents-javascript
   private latinMap: any = {

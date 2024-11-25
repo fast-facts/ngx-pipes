@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'underscore' })
+@Pipe({
+    name: 'underscore',
+    standalone: false
+})
 export class UnderscorePipe implements PipeTransform {
   transform(text: string, chars?: string): string;
   transform<T>(text: T, chars?: string): T;

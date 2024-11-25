@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'sum' })
+@Pipe({
+    name: 'sum',
+    standalone: false
+})
 export class SumPipe implements PipeTransform {
   transform(num: number[]): number;
   transform<T>(num: T): T;

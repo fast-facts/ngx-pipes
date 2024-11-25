@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'repeat' })
+@Pipe({
+    name: 'repeat',
+    standalone: false
+})
 export class RepeatPipe implements PipeTransform {
   transform(str: string, n = 1, separator = ''): string {
     if (n <= 0) {

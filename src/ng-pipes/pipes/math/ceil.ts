@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'ceil' })
+@Pipe({
+    name: 'ceil',
+    standalone: false
+})
 export class CeilPipe implements PipeTransform {
   transform(num: number, precision = 0): number {
     if (precision <= 0) {

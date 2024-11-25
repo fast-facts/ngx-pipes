@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'sample' })
+@Pipe({
+    name: 'sample',
+    standalone: false
+})
 export class SamplePipe implements PipeTransform {
   transform<T extends any[]>(input: T, len?: number): T;
   transform<T>(input: T, len?: number): T;

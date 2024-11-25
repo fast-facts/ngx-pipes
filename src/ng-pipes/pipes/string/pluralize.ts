@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { isVowel } from '../helpers/helpers';
 
 @Pipe({
-  name: 'makePluralString',
+    name: 'makePluralString',
+    standalone: false
 })
 
 /**

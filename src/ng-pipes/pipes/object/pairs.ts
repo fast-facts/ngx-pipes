@@ -2,7 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { isObject } from '../helpers/helpers';
 import type { GenericRecord } from '../helpers/helpers';
 
-@Pipe({ name: 'pairs' })
+@Pipe({
+    name: 'pairs',
+    standalone: false
+})
 export class PairsPipe implements PipeTransform {
   transform<T extends any[]>(obj: T): T;
   transform<T>(obj: T): T extends GenericRecord<any> ? [string, any][] : T;

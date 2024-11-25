@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'shuffle' })
+@Pipe({
+    name: 'shuffle',
+    standalone: false
+})
 export class ShufflePipe implements PipeTransform {
   transform<T extends any[]>(input: T): T;
   transform<T>(input: T): T;

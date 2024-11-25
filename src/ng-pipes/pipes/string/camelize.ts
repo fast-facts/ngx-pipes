@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'camelize' })
+@Pipe({
+    name: 'camelize',
+    standalone: false
+})
 export class CamelizePipe implements PipeTransform {
   transform(input: string, chars?: string): string;
   transform<T>(input: T, chars?: string): T;

@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { applyPrecision, isNumberFinite, isUndefined } from '../helpers/helpers';
 
-@Pipe({ name: 'bytes' })
+@Pipe({
+    name: 'bytes',
+    standalone: false
+})
 export class BytesPipe implements PipeTransform {
   private dictionary: { max: number; type: string }[] = [
     { max: 1024, type: 'B' },

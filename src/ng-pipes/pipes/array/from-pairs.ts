@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import type { GenericRecord } from '../helpers/helpers';
 
-@Pipe({ name: 'fromPairs' })
+@Pipe({
+    name: 'fromPairs',
+    standalone: false
+})
 export class FromPairsPipe implements PipeTransform {
   transform<T extends any[]>(input: T): GenericRecord<any>;
   transform<T>(input: T): T;

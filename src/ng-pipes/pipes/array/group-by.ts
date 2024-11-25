@@ -2,7 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { extractDeepPropertyByMapKey, isFunction } from '../helpers/helpers';
 import type { GenericRecord } from '../helpers/helpers';
 
-@Pipe({ name: 'groupBy' })
+@Pipe({
+    name: 'groupBy',
+    standalone: false
+})
 export class GroupByPipe implements PipeTransform {
   transform<T extends any[]>(input: T, discriminator?: any, delimiter?: string): GenericRecord<T>;
   transform<T>(input: T, discriminator?: any, delimiter?: string): T;

@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isString } from '../helpers/helpers';
 
-@Pipe({ name: 'chunk' })
+@Pipe({
+    name: 'chunk',
+    standalone: false
+})
 export class ChunkPipe implements PipeTransform {
   transform<T extends any[]>(input: T, size?: number): T[];
   transform<T extends string>(input: T, size?: number): string[][];

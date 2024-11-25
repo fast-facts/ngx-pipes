@@ -2,7 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { getKeysTwoObjects, isDeepEqual, isObject } from '../helpers/helpers';
 import type { GenericRecord } from '../helpers/helpers';
 
-@Pipe({ name: 'diffObj' })
+@Pipe({
+    name: 'diffObj',
+    standalone: false
+})
 export class DiffObjPipe implements PipeTransform {
   transform<T extends any[]>(obj: T, original: any): GenericRecord<never>;
   transform<T>(obj: T, original: any): T extends GenericRecord<any> ? Partial<T> : GenericRecord<never>;

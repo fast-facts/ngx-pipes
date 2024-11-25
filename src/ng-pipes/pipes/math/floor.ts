@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'floor' })
+@Pipe({
+    name: 'floor',
+    standalone: false
+})
 export class FloorPipe implements PipeTransform {
   transform(num: number, precision = 0): number {
     if (precision <= 0) {

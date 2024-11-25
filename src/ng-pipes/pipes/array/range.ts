@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'range' })
+@Pipe({
+    name: 'range',
+    standalone: false
+})
 export class RangePipe implements PipeTransform {
   transform(start: number, count: number, step?: number): number[];
   transform(start?: number, count?: number, step?: number): [];

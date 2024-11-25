@@ -8,7 +8,10 @@ import {
   isUndefined,
 } from '../helpers/helpers';
 
-@Pipe({ name: 'filterBy' })
+@Pipe({
+    name: 'filterBy',
+    standalone: false
+})
 export class FilterByPipe implements PipeTransform {
   transform<K, T extends K[]>(input: T, props: string[], search?: any, strict?: boolean): T;
   transform<T>(input: T, props?: string[], search?: any, strict?: boolean): T;

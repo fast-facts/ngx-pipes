@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { isVowel } from '../helpers/helpers';
 
 @Pipe({
-  name: 'aOrAn',
+    name: 'aOrAn',
+    standalone: false
 })
 /**
  * Takes a string and returns the string prepended by 'a' or 'an'.

@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'flatten' })
+@Pipe({
+    name: 'flatten',
+    standalone: false
+})
 export class FlattenPipe implements PipeTransform {
   transform<T extends any[]>(input: T, shallow?: boolean): any[];
   transform<T>(input: T, shallow?: boolean): T;

@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'diff' })
+@Pipe({
+    name: 'diff',
+    standalone: false
+})
 export class DiffPipe implements PipeTransform {
   transform<T extends any[]>(input: T, ...args: T[]): T;
   transform<T>(input: T, ...args: any[]): T;

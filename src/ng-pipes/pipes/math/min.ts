@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'min' })
+@Pipe({
+    name: 'min',
+    standalone: false
+})
 export class MinPipe implements PipeTransform {
   transform(arr: number | number[]): number {
     return Array.isArray(arr) ? Math.min(...arr) : arr;

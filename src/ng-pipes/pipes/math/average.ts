@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { isNumberFinite } from '../helpers/helpers';
 
-@Pipe({ name: 'average' })
+@Pipe({
+    name: 'average',
+    standalone: false
+})
 export class AveragePipe implements PipeTransform {
   transform(arr: number[]): number {
     const isValid = arr.every(value => isNumberFinite(value));
