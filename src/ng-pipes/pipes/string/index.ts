@@ -50,8 +50,7 @@ export const STRING_PIPES = [
 ];
 
 @NgModule({
-  declarations: STRING_PIPES,
-  imports: [],
+  imports: STRING_PIPES,
   exports: STRING_PIPES,
 })
 export class NgStringPipesModule { }

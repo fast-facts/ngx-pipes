@@ -1,5 +1,5 @@
 import { TimeAgoPipe } from './time-ago';
-import * as moment from 'moment';
+import moment from 'moment';
 
 describe('TimeAgoPipe', () => {
   let pipe: TimeAgoPipe;
