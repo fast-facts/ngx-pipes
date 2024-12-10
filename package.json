@@ -40,7 +40,7 @@
     "@types/jasmine": "^5.1.5",
     "@types/jasminewd2": "~2.0.13",
     "@types/node": "^22.10.1",
-    "angular-eslint": "19.0.1",
+    "angular-eslint": "19.0.2",
     "core-js": "^3.39.0",
     "eslint": "^9.16.0",
     "husky": "^9.1.7",
@@ -59,7 +59,7 @@
     "rxjs": "^7.8.1",
     "standard-version": "^9.5.0",
     "typescript": "^5.6.3",
-    "typescript-eslint": "8.17.0",
+    "typescript-eslint": "8.18.0",
     "zone.js": "^0.15.0"
   }
 }
