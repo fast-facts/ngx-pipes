@@ -39,7 +39,7 @@
     "@angular/platform-browser-dynamic": "^19.2.9",
     "@types/jasmine": "^5.1.8",
     "@types/jasminewd2": "~2.0.13",
-    "@types/node": "^22.15.14",
+    "@types/node": "^22.15.16",
     "angular-eslint": "19.3.0",
     "core-js": "^3.42.0",
     "eslint": "^9.26.0",
