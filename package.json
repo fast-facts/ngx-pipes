@@ -40,7 +40,7 @@
     "@types/jasminewd2": "~2.0.13",
     "@types/node": "^22.15.30",
     "angular-eslint": "20.0.0",
-    "core-js": "^3.42.0",
+    "core-js": "^3.43.0",
     "eslint": "^9.28.0",
     "husky": "^9.1.7",
     "jasmine-core": "^5.8.0",
