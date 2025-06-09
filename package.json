@@ -27,19 +27,19 @@
     "url": "https://github.com/fast-facts/ngx-pipes.git"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^20.0.0",
-    "@angular/build": "^20.0.0",
-    "@angular/cli": "^20.0.0",
-    "@angular/common": "^20.0.0",
-    "@angular/compiler": "^20.0.0",
-    "@angular/compiler-cli": "^20.0.0",
-    "@angular/core": "^20.0.0",
-    "@angular/platform-browser": "^20.0.0",
-    "@angular/platform-browser-dynamic": "^20.0.0",
+    "@angular-devkit/build-angular": "^20.0.1",
+    "@angular/build": "^20.0.1",
+    "@angular/cli": "^20.0.1",
+    "@angular/common": "^20.0.2",
+    "@angular/compiler": "^20.0.2",
+    "@angular/compiler-cli": "^20.0.2",
+    "@angular/core": "^20.0.2",
+    "@angular/platform-browser": "^20.0.2",
+    "@angular/platform-browser-dynamic": "^20.0.2",
     "@types/jasmine": "^5.1.8",
     "@types/jasminewd2": "~2.0.13",
     "@types/node": "^22.15.30",
-    "angular-eslint": "19.7.1",
+    "angular-eslint": "20.0.0",
     "core-js": "^3.42.0",
     "eslint": "^9.28.0",
     "husky": "^9.1.7",
@@ -58,7 +58,7 @@
     "rxjs": "^7.8.2",
     "standard-version": "^9.5.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "8.33.1",
+    "typescript-eslint": "^8.33.1",
     "zone.js": "^0.15.1"
   }
 }
