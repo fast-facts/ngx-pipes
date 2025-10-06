@@ -41,7 +41,7 @@
     "@types/node": "^24.6.2",
     "angular-eslint": "20.3.0",
     "core-js": "^3.45.1",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "husky": "^9.1.7",
     "jasmine-core": "^5.11.0",
     "jasmine-spec-reporter": "~7.0.0",
