@@ -58,7 +58,7 @@
     "rxjs": "^7.8.2",
     "standard-version": "^9.5.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.1",
+    "typescript-eslint": "^8.54.0",
     "zone.js": "^0.15.1"
   }
 }
