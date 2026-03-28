@@ -13,8 +13,8 @@ updates:
     ignore:
       - dependency-name: '@angular*'
       - dependency-name: 'ng-packagr'
-      - dependency-name: 'typescript'
-        versions: ['>=5.7.0']
+      - dependency-name: 'eslint'
+        versions: ['>=10']
     groups:
       typescript and eslint:
         patterns:
