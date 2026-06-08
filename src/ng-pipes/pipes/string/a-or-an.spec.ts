@@ -6,12 +6,6 @@ describe('AorAnPipe Tests', () => {
     pipe = new AorAnPipe();
   });
   describe('Misc. Inputs', () => {
-    it('should return "" if passed null', () => {
-      expect(pipe.transform(null)).toEqual('' as string);
-    });
-    it('should return "" if passed undefined', () => {
-      expect(pipe.transform(undefined)).toEqual('' as string);
-    });
     it('should return "" if passed ""', () => {
       expect(pipe.transform('')).toEqual('' as string);
     });

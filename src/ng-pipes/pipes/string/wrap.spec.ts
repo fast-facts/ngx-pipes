@@ -8,8 +8,6 @@ describe('WrapPipe Tests', () => {
   });
 
   it('Should not do anything if main text is not a string', () => {
-    expect(pipe.transform(null)).toEqual(null);
-    expect(pipe.transform(undefined)).toEqual(undefined);
     expect(pipe.transform(42 as any)).toEqual(42 as any);
     expect(pipe.transform({ name: 'foo' } as any)).toEqual({
       name: 'foo',

@@ -16,9 +16,9 @@ describe('MatchPipe Tests', () => {
 
   it('Should camelize properly', () => {
     expect(pipe.transform('foo 42', '[\\d]+$', 'g')).toEqual(['42']);
-    expect(pipe.transform('42 foo', '[\\d]+$', 'g')).toEqual(null);
-    expect(pipe.transform('foo', '[\\d]+$', 'g')).toEqual(null);
-    expect(pipe.transform('FOO', '^foo')).toEqual(null);
+    expect(pipe.transform('42 foo', '[\\d]+$', 'g')).toEqual(null as any);
+    expect(pipe.transform('foo', '[\\d]+$', 'g')).toEqual(null as any);
+    expect(pipe.transform('FOO', '^foo')).toEqual(null as any);
     expect(pipe.transform('FOO', '^foo', 'i')).toBeTruthy();
   });
 });

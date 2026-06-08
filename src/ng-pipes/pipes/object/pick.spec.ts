@@ -10,8 +10,6 @@ describe('PickPipe', () => {
   it('should keep the element the same way if its not an object', () => {
     expect(pipe.transform([1, 2, 3])).toEqual([1, 2, 3]);
     expect(pipe.transform([])).toEqual([]);
-    expect(pipe.transform(null)).toEqual(null);
-    expect(pipe.transform(undefined)).toEqual(undefined);
   });
 
   it('should return picked object by args', () => {

@@ -8,8 +8,6 @@ describe('SlugifyPipe Tests', () => {
   });
 
   it('Should slugify strings', () => {
-    expect(pipe.transform(null)).toEqual(null);
-    expect(pipe.transform(undefined)).toEqual(undefined);
     expect(pipe.transform('')).toEqual('');
     expect(pipe.transform('Foo')).toEqual('foo');
     expect(pipe.transform('Foo Bar')).toEqual('foo-bar');

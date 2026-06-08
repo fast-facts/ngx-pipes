@@ -33,7 +33,7 @@ export class FilterByPipe implements PipeTransform {
 
           if (isUndefined(value) && !isUndefined(props) && Array.isArray(props)) {
             return props.some(parent => {
-              const str = String(parent[tail]).toLowerCase();
+              const str = String(parent[tail as string]).toLowerCase();
 
               return strict ? str === term : !!~str.indexOf(term);
             });
