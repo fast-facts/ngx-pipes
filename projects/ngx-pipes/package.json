@@ -1,0 +1,29 @@
+{
+  "name": "ngx-pipes-updated",
+  "version": "0.0.0-semantic-release",
+  "author": "Dan Revah",
+  "description": "Useful angular pipes",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng-packagr",
+    "lint": "ng lint",
+    "test": "ng test --watch=false"
+  },
+  "keywords": [
+    "ngx",
+    "ng",
+    "angular",
+    "pipes",
+    "filters",
+    "library",
+    "ngx pipes",
+    "angular filters",
+    "angular pipes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fast-facts/ngx-pipes.git"
+  }
+}

@@ -16,7 +16,7 @@ export default defineConfig([
         processor: angular.processInlineTemplates,
         languageOptions: {
             parserOptions: {
-                project: ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+                project: ["tsconfig.lib.json", "tsconfig.spec.json"],
             },
         },
         rules: {
